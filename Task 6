@@ -1,0 +1,34 @@
+class University {
+  constructor(name) {
+    this.name = name;
+    this.faculties = [];
+  }
+
+  addFaculty(faculty) {
+    if (!this.faculties.includes(faculty)) {
+      this.faculties.push(faculty);
+      console.log(`Adding ${faculty}`);
+    } else {
+      console.log(`${faculty} already exists`);
+    }
+  }
+
+  removeFaculty(faculty) {
+    const index = this.faculties.indexOf(faculty);
+    if (index !== -1) {
+      this.faculties.splice(index, 1);
+      console.log(`Removing ${faculty}`);
+    } else {
+      console.log(`${faculty} not found`);
+    }
+  }
+
+  displayAllFaculties() {
+    if (this.faculties.length > 0) {
+      console.log("Faculties:");
+      this.faculties.forEach((faculty) => console.log(faculty));
+    } else {
+      console.log("No faculties found.");
+    }
+  }
+}
