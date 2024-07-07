@@ -1,0 +1,11 @@
+function findVariableErrorError() {
+    try {
+        console.log(Variable);
+    } catch (e) {
+        if (e.name === 'ReferenceError') {
+            console.error('Переменна неопределена');
+        }
+    }
+}
+
+findVariableError();
