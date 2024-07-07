@@ -1,0 +1,18 @@
+'use strict';
+
+function findMinValue(array) {
+    if (array.length === 0) {
+        console.log("Массив не должен быть пустым");
+    }
+    let minValue = array[0];
+
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] < minValue) {
+            minValue = array[i];
+        }
+    }
+
+    return minValue;
+}
+
+console.log("Минимальное число:", minValue);
