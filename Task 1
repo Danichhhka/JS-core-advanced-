@@ -1,0 +1,6 @@
+'use strict';
+
+function divideIntoWords(inputText) {
+    return inputText.split(' ');
+}
+console.log(splitIntoWords('Lorem ipsum dolor sit amet, consectetur adip'));
