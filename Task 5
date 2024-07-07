@@ -1,0 +1,20 @@
+'use strict';
+
+function findUniqueCharacter(inputText) {
+    const charSet = new Set(inputText);
+
+    for (const char of charSet) {
+        let count = 0;  
+        for (let a = 0; a < inputText.length; a++) {
+            if (char === inputText[a]) {
+                count++;
+            }
+        }
+
+        if (count === 1) {
+            return char;
+        }
+    }
+
+    return null;
+}
