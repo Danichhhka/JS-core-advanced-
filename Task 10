@@ -1,0 +1,23 @@
+function eventLoop(input) {
+    return new Promise((resolve, reject) => {
+        if (typeof input !== 'number') {
+            reject(new Error('Ошибка. Введите число'));
+        } else {
+            const timeout = input % 2 === 0 ? 2000 : 1000;
+            setTimeout(() => {
+                resolve(input % 2 === 0 ? 'Even' : 'Odd');
+            }, timeout);
+        }
+    });
+}
+eventLoop(4)
+    .then(result => console.log(result))
+    .catch(error => console.error(error.message));
+
+eventLoop(5)
+    .then(result => console.log(result))
+    .catch(error => console.error(error.message));
+
+eventLoop('text')
+    .then(result => console.log(result))
+    .catch(error => console.error(error.message));
